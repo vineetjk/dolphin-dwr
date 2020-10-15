@@ -24,15 +24,13 @@ function btnFetch(){
   if(id.includes('CSE')){
     x = document.getElementById("alertt");
       x.style.display = "none";
-      y = document.getElementById("main-form");
-      y.style.display = "block";
+     
     pathString = '/CSE/'+ id + '/name';
     
   }else if(id.includes('KEN')){
     x = document.getElementById("alertt");
       x.style.display = "none";
-      y = document.getElementById("main-form");
-      y.style.display = "block";
+      
     pathString = '/KEN/'+ id + '/name';
   }else{
     alerting("Please Enter correct ID");
@@ -45,10 +43,13 @@ function btnFetch(){
     if(snapshot.val() != null){
       x = document.getElementById("alertt");
       x.style.display = "none";
+      
+      document.getElementById("output").innerHTML = "Welcome " + "<b>"+ snapshot.val()+ "<b>";
       y = document.getElementById("main-form");
       y.style.display = "block";
-      document.getElementById("output").innerHTML = "Welcome " + "<b>"+ snapshot.val()+ "<b>";
     }else{
+      
+
       alerting("Data Not Found. Please contact admin.");
     }
    
@@ -61,6 +62,9 @@ function alerting(str) {
   document.getElementById("alertt").innerHTML = str;
   x = document.getElementById("alertt");
   x.style.display = "block";
+  document.getElementById("output").innerHTML = "";
+  y = document.getElementById("main-form");
+      y.style.display = "none";
   
     
   
