@@ -17,6 +17,9 @@ var pathString = '';
  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
  firebase.initializeApp(DBconfig);
  var database = firebase.database();
+
+ var btn = document.getElementById("fetch");
+
 function btnFetch(){
   console.log(document.getElementById("inputID").value);
   var id = document.getElementById("inputID").value;
@@ -69,5 +72,5 @@ function alerting(str) {
     
   
 } 
- 
 
+ 
