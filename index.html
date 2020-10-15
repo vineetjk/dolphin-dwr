@@ -5,7 +5,7 @@
     <title>Dolphin RT-PCR test</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#00AB66" />
+    <meta name="theme-color" content="#62a8fc" />
 
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <!-- CSS only -->
@@ -38,12 +38,11 @@
 
 
     </script>
-    <script>
 
+    <!-- manifest file  -->
+    <link rel="manifest" href="manifest.json" />
+    <script async src="https://unpkg.com/pwacompat" crossorigin="anonymous"></script>
 
-
-
-    </script>
 
 
 </head>
@@ -135,49 +134,49 @@
 
             </div>
             <div class="row">
-               
-                    <div class="btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-outline-danger m-2">
-                            <input  class="example"  type="checkbox" value="Fever"> Fever
-                        </label>
-                        <label class="btn btn-outline-danger m-2">
-                            <input  class="example"  type="checkbox" value="Chills"> Chills
-                        </label>
-                        <label class="btn btn-outline-danger m-2">
-                            <input  class="example"  type="checkbox" value="Sore throat with or without body ache">
-                            Sore throat with or without body ache
-                        </label>
-                        <label class="btn btn-outline-danger m-2">
-                            <input  class="example"  type="checkbox"
-                                value="Sneezing with any one of above symptom"> Sneezing with any one of above symptom
-                        </label>
-                        <label class="btn btn-outline-danger m-2">
-                            <input  class="example"  type="checkbox"
-                                value="Loss of taste or smell with any one of above symtoms"> Loss of taste or smell
-                            with any one of above symtoms
-                        </label>
-                        <label class="btn btn-outline-danger m-2">
-                            <input  class="example"  type="checkbox" value="Loose motions with tummy pains">
-                            Loose motions with tummy pains
-                        </label>
-                        <label class="btn btn-outline-danger m-2">
-                            <input  class="example"  type="checkbox"
-                                value="Dry cough with any one fever chills sore throat body ache fatigue"> Dry cough
-                            with any one fever chills sore throat body ache fatigue
-                        </label>
-                        <label class="btn btn-outline-success m-2">
-                            <input  class="vvv" type="checkbox" value="None of the above"> None of the
-                            above
-                        </label>
 
-                    </div>
-                
+                <div class="btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-outline-danger m-2">
+                        <input class="example" type="checkbox" value="Fever"> Fever
+                    </label>
+                    <label class="btn btn-outline-danger m-2">
+                        <input class="example" type="checkbox" value="Chills"> Chills
+                    </label>
+                    <label class="btn btn-outline-danger m-2">
+                        <input class="example" type="checkbox" value="Sore throat with or without body ache">
+                        Sore throat with or without body ache
+                    </label>
+                    <label class="btn btn-outline-danger m-2">
+                        <input class="example" type="checkbox" value="Sneezing with any one of above symptom"> Sneezing
+                        with any one of above symptom
+                    </label>
+                    <label class="btn btn-outline-danger m-2">
+                        <input class="example" type="checkbox"
+                            value="Loss of taste or smell with any one of above symtoms"> Loss of taste or smell
+                        with any one of above symtoms
+                    </label>
+                    <label class="btn btn-outline-danger m-2">
+                        <input class="example" type="checkbox" value="Loose motions with tummy pains">
+                        Loose motions with tummy pains
+                    </label>
+                    <label class="btn btn-outline-danger m-2">
+                        <input class="example" type="checkbox"
+                            value="Dry cough with any one fever chills sore throat body ache fatigue"> Dry cough
+                        with any one fever chills sore throat body ache fatigue
+                    </label>
+                    <label class="btn btn-outline-success m-2">
+                        <input class="vvv" type="checkbox" value="None of the above"> None of the
+                        above
+                    </label>
+
+                </div>
+
 
 
                 <div>
 
                 </div>
-                <input type="button"  value="Send order">
+                <input type="button" value="Send order">
 
             </div>
         </div>
@@ -222,10 +221,11 @@
         <div class="warn-card">
             <div class="row">
                 <div class="col-2">
-                   <h1><i class="fa fa-exclamation-triangle fa-6x" aria-hidden="true"></i></h1> 
+                    <h1><i class="fa fa-exclamation-triangle fa-6x" aria-hidden="true"></i></h1>
                 </div>
                 <div class="col-10">
-                    <p class="lead"> Athletes reporting symptoms or feeling unwell/ unsure will not be allowed into the swimming complex. </p>
+                    <p class="lead"> Athletes reporting symptoms or feeling unwell/ unsure will not be allowed into the
+                        swimming complex. </p>
                 </div>
             </div>
         </div>
@@ -233,10 +233,11 @@
         <div class="warn-card">
             <div class="row">
                 <div class="col-2">
-                   <h1><i class="fa fa-exclamation-triangle fa-6x" aria-hidden="true"></i></h1> 
+                    <h1><i class="fa fa-exclamation-triangle fa-6x" aria-hidden="true"></i></h1>
                 </div>
                 <div class="col-10">
-                    <p class="lead"> Parents / guardians/ drivers will not be allowed in the swimming pool Gallery or reception area.</p>
+                    <p class="lead"> Parents / guardians/ drivers will not be allowed in the swimming pool Gallery or
+                        reception area.</p>
                 </div>
             </div>
         </div>
@@ -277,7 +278,7 @@
             btnFetch();
         });
         $('input.vvv').on('change', function () {
-           
+
             $('input.example').prop('checked', true);
             $('.example').button('toggle');
         });

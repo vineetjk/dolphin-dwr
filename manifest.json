@@ -1,0 +1,13 @@
+{
+    "name": "Dolphin Aquatics",
+    "short_name": "RT-PCR test",
+    "description": "RT-PCR test for Covid-19 prior to resumption of training.",
+    "start_url": "/",
+    "background_color": "#000000",
+    "theme_color": "#0f4a73",
+    "icons": [{
+      "src": "assets/img/logo.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    }]
+  }
