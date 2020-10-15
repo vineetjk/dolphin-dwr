@@ -9,6 +9,7 @@
     margin-bottom: 20px;
     border-radius: 15px;
     
+    
 }
 
 .my-card-1{
@@ -18,5 +19,32 @@
     margin-bottom: 20px;
     border-radius: 0px 0px 15px 15px ;
     text-align: center;
+    
     background-image: url('https://image.freepik.com/free-vector/abstract-blurred-gradient-mesh-background_1159-3175.jpg');
+}
+
+.my-card-12{
+    
+    
+    background-color: rgb(255, 255, 255);
+    padding: 4px;
+    box-shadow: rgba(0, 0, 0, 0.109) 5px 5px 5px;
+    
+    border: 0ch;
+    outline: none;
+    display: inline;
+    border-radius: 1px;
+
+}
+
+.my-bt{
+
+    background-color: rgb(0, 13, 73); /* Green */
+    border: none;
+    
+    
+    
+   
+
+
 }
