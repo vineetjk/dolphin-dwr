@@ -20,7 +20,8 @@
     border-radius: 0px 0px 15px 15px ;
     text-align: center;
     
-    background-image: url('https://image.freepik.com/free-vector/abstract-blurred-gradient-mesh-background_1159-3175.jpg');
+    background-image: url('/assets/img/bck.png');
+    background-size: cover;
 }
 
 .my-card-12{
