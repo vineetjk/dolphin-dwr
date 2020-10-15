@@ -57,10 +57,24 @@
 
 
 
-        <div class="my-card-12">
-            <input type="text" placeholder="Enter ID" id="inputID" onkeyup="this.value = this.value.toUpperCase();">
+        <div class="container">
+            <div class="row">
+                <div class="col-9">
+                    <input type="text" class="form-control" placeholder="Enter ID" id="inputID" onkeyup="this.value = this.value.toUpperCase();">
+                    
 
-            <button type="button" id="fetch" onclick="btnFetch()" class="my-bt" style="outline: none;" >Fetch Data</button>
+                </div>
+                <div class="col-3">
+                    <button type="button" id="fetch" onclick="btnFetch()" class="btn btn-primary"  >Go</button>
+
+
+                </div>
+
+
+               
+
+        </div>
+        
         </div>
 
 
@@ -68,19 +82,19 @@
 
         </div>
 
-        <p id="output"></p>
+        <p id="output" class="m-3" style="color: white;" ></p>
     </div>
-    <div class="container">
+    <div class="container " style="display: none;" id="main-form">
         <div class="my-card ">
 
 
             <div class="row">
 
-                <div class="col-6">
-                    <h5 class=" lead">Feeling Unwell?</h5>
+                <div class="col-3">
+                    <p class="lead  m-0">Feeling Unwell?</p>
                 </div>
-                <div class="col-6 text-right">
-                    <div class="btn-group btn-group-toggle " data-toggle="buttons">
+                <div class="col-8 text-right ">
+                    <div class="btn-group btn-group-toggle ml-0 " data-toggle="buttons">
                         <label class="btn btn-outline-info outline active">
                             <input type="radio" name="options" id="option1" autocomplete="off" checked> Yes
                         </label>
