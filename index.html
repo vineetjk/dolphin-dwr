@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Dolphin RT-PCR test</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#00AB66" />
+
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+
+    <script src="/config.js">
+
+
+    </script>
+    <script>
+
+
+
+
+    </script>
+
+
+</head>
+
+<body class="bg-light">
+    <div class="container my-card-1">
+        <div class="py-5 text-center">
+            <img class="d-block mx-auto mb-4" src="/assets/img/logo.png" alt="" width="200">
+            <h4 class="lead">RT-PCR test for Covid-19 prior to resumption of training.</h4>
+        </div>
+
+
+
+        <div >
+            <input type="text" placeholder="Enter ID" id="inputID" onkeyup="this.value = this.value.toUpperCase();">
+
+            <button type="button" id="fetch" onclick="btnFetch()" class="btn btn-primary" style="display: none;">Fetch Data</button>
+        </div>
+
+
+        <div class="alert alert-danger mt-3" role="alert" id="alertt" style="display: none;">
+
+        </div>
+
+        <p id="output"></p>
+    </div>
+    <div class="container">
+        <div class="my-card ">
+
+
+            <div class="row">
+
+                <div class="col-6">
+                    <h5 class=" lead">Feeling Unwell?</h5>
+                </div>
+                <div class="col-6 text-right">
+                    <div class="btn-group btn-group-toggle " data-toggle="buttons">
+                        <label class="btn btn-outline-info outline active">
+                            <input type="radio" name="options" id="option1" autocomplete="off" checked> Yes
+                        </label>
+                        <label class="btn btn-outline-info">
+                            <input type="radio" name="options" id="option2" autocomplete="off"> Maybe
+                        </label>
+                        <label class="btn btn-outline-info">
+                            <input type="radio" name="options" id="option2" autocomplete="off"> No
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="my-card">
+            <div class="row">
+                <h4 class="lead col-12">Symptoms</h4>
+
+            </div>
+            <div class="row">
+                <div class="btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-outline-danger m-2">
+                      <input type="checkbox"  autocomplete="off"> Fever
+                    </label>
+                    <label class="btn btn-outline-danger m-2">
+                        <input type="checkbox"  autocomplete="off"> Chills
+                      </label>
+                      <label class="btn btn-outline-danger m-2">
+                        <input type="checkbox"  autocomplete="off"> Sore throat with or without body ache
+                      </label>
+                      <label class="btn btn-outline-danger m-2">
+                        <input type="checkbox"  autocomplete="off"> Sneezing with any one of above symptom
+                      </label>
+                      <label class="btn btn-outline-danger m-2">
+                        <input type="checkbox"  autocomplete="off"> Loss of taste or smell with any one of above symtoms
+                      </label>
+                      <label class="btn btn-outline-danger m-2">
+                        <input type="checkbox"  autocomplete="off"> Loose motions with tummy pains
+                      </label>
+                      <label class="btn btn-outline-danger m-2">
+                        <input type="checkbox"  autocomplete="off"> Dry cough with any one fever chills sore throat body ache fatigue
+                      </label>
+                      <label class="btn btn-outline-success m-2">
+                        <input type="checkbox"  autocomplete="off"> None of the above
+                      </label>
+                    
+                  </div>
+        
+            </div>
+        </div>
+
+      
+
+    </div>
+
+    <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
+        <div class="container">
+
+            <small>Made with ♡ by <a style="color: inherit;" href="https://vineetjk.me">vineetjk</a></small>
+            <small style="float: right;"> <a style="color: inherit;"
+                    href="https://github.com/vineetjk/rit-course-reg/"><i class="fa fa-github"
+                        aria-hidden="true"></i></a></small>
+
+        </div>
+
+    </footer>
+    <script>
+        // Get the input field
+        var input = document.getElementById("inputID");
+
+        // Execute a function when the user releases a key on the keyboard
+        input.addEventListener("keyup", function (event) {
+            // Number 13 is the "Enter" key on the keyboard
+            if (event.keyCode === 13) {
+                // Cancel the default action, if needed
+                event.preventDefault();
+                // Trigger the button element with a click
+                document.getElementById("fetch").click();
+            }
+        }); 
+    </script>
+</body>
+
+
+</html>

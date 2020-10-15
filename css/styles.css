@@ -1,0 +1,22 @@
+.cap{
+    text-transform:uppercase; 
+}
+
+.my-card{
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.109) 2px 2px 5px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    
+}
+
+.my-card-1{
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.109) 2px 2px 5px;
+    margin-bottom: 20px;
+    border-radius: 0px 0px 15px 15px ;
+    text-align: center;
+    background-image: url('https://image.freepik.com/free-vector/abstract-blurred-gradient-mesh-background_1159-3175.jpg');
+}
