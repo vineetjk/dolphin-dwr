@@ -59,31 +59,49 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-9">
-                    <input type="text" class="form-control" placeholder="Enter ID" id="inputID" onkeyup="this.value = this.value.toUpperCase();">
-                    
+
+                <div class="col-12 ">
+                    <input type="text" class="form-control" placeholder="Enter ID" id="inputID"
+                        onkeyup="this.value = this.value.toUpperCase();">
+                </div>
+                <div class="col-12 mt-3">
+                    <input type="password" class="form-control" placeholder="Enter DOB (DD.MM.YY)" id="inputDOB"
+                        onkeyup="this.value = this.value.toUpperCase();">
+                </div>
+
+
+            </div>
+
+            <div class="row">
+                <div class="col-4 ">
+
 
                 </div>
-                <div class="col-3">
-                    
-                    <input class="btn btn-primary"  type="submit" id="button" value="GO" />
-                
+                <div class="col-4 mt-3 ">
+
+                    <input class="btn btn-primary col-12" type="submit" id="button" value="LOGIN" />
+
                 </div>
+                <div class="col-4 ">
+
+
+                </div>
+
+            </div>
+
         </div>
-        
-        </div>
-        
+
 
 
         <div class="alert alert-danger mt-3" role="alert" id="alertt" style="display: none;">
 
         </div>
 
-        <p id="output" class="m-3" style="color: rgb(32, 2, 88);" ></p>
+        <p id="output" class="m-3" style="color: rgb(32, 2, 88);"></p>
     </div>
 
 
-   
+
     <div class="container " style="display: none;" id="main-form">
         <div class="my-card ">
 
@@ -96,20 +114,20 @@
                 <div class="col-8 text-right ">
                     <div class="btn-group btn-group-toggle ml-0 " data-toggle="buttons">
                         <label class="btn btn-outline-info outline active">
-                            <input type="radio" name="options" id="option1" autocomplete="off" checked> Yes
+                            <input type="radio" name="options" id="option1" checked> Yes
                         </label>
                         <label class="btn btn-outline-info">
-                            <input type="radio" name="options" id="option2" autocomplete="off"> Maybe
+                            <input type="radio" name="options" id="option2"> Maybe
                         </label>
                         <label class="btn btn-outline-info">
-                            <input type="radio" name="options" id="option2" autocomplete="off"> No
+                            <input type="radio" name="options" id="option2"> No
                         </label>
                     </div>
                 </div>
             </div>
         </div>
 
-        
+
 
         <div class="my-card">
             <div class="row">
@@ -117,66 +135,113 @@
 
             </div>
             <div class="row">
-                <div class="btn-group-toggle" data-toggle="buttons">
-                    <label class="btn btn-outline-danger m-2">
-                      <input type="checkbox"  autocomplete="off"> Fever
-                    </label>
-                    <label class="btn btn-outline-danger m-2">
-                        <input type="checkbox"  autocomplete="off"> Chills
-                      </label>
-                      <label class="btn btn-outline-danger m-2">
-                        <input type="checkbox"  autocomplete="off"> Sore throat with or without body ache
-                      </label>
-                      <label class="btn btn-outline-danger m-2">
-                        <input type="checkbox"  autocomplete="off"> Sneezing with any one of above symptom
-                      </label>
-                      <label class="btn btn-outline-danger m-2">
-                        <input type="checkbox"  autocomplete="off"> Loss of taste or smell with any one of above symtoms
-                      </label>
-                      <label class="btn btn-outline-danger m-2">
-                        <input type="checkbox"  autocomplete="off"> Loose motions with tummy pains
-                      </label>
-                      <label class="btn btn-outline-danger m-2">
-                        <input type="checkbox"  autocomplete="off"> Dry cough with any one fever chills sore throat body ache fatigue
-                      </label>
-                      <label class="btn btn-outline-success m-2">
-                        <input type="checkbox"  autocomplete="off"> None of the above
-                      </label>
-                    
-                  </div>
-        
+               
+                    <div class="btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-outline-danger m-2">
+                            <input  class="example"  type="checkbox" value="Fever"> Fever
+                        </label>
+                        <label class="btn btn-outline-danger m-2">
+                            <input  class="example"  type="checkbox" value="Chills"> Chills
+                        </label>
+                        <label class="btn btn-outline-danger m-2">
+                            <input  class="example"  type="checkbox" value="Sore throat with or without body ache">
+                            Sore throat with or without body ache
+                        </label>
+                        <label class="btn btn-outline-danger m-2">
+                            <input  class="example"  type="checkbox"
+                                value="Sneezing with any one of above symptom"> Sneezing with any one of above symptom
+                        </label>
+                        <label class="btn btn-outline-danger m-2">
+                            <input  class="example"  type="checkbox"
+                                value="Loss of taste or smell with any one of above symtoms"> Loss of taste or smell
+                            with any one of above symtoms
+                        </label>
+                        <label class="btn btn-outline-danger m-2">
+                            <input  class="example"  type="checkbox" value="Loose motions with tummy pains">
+                            Loose motions with tummy pains
+                        </label>
+                        <label class="btn btn-outline-danger m-2">
+                            <input  class="example"  type="checkbox"
+                                value="Dry cough with any one fever chills sore throat body ache fatigue"> Dry cough
+                            with any one fever chills sore throat body ache fatigue
+                        </label>
+                        <label class="btn btn-outline-success m-2">
+                            <input  class="vvv" type="checkbox" value="None of the above"> None of the
+                            above
+                        </label>
+
+                    </div>
+                
+
+
+                <div>
+
+                </div>
+                <input type="button"  value="Send order">
+
             </div>
         </div>
 
-        
 
-      
+
+
 
     </div>
 
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img class="d-block w-100" src="assets/img/1.png" alt="First slide">
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="assets/img/2.png" alt="Second slide">
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="assets/img/3.png" alt="Third slide">
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="assets/img/4.png" alt="Third slide">
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="assets/img/5.png" alt="Third slide">
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="assets/img/6.png" alt="Third slide">
-          </div>
+
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="assets/img/6.png" alt="Arogya Setu App is mandatory">
+            </div>
+
+            <div class="carousel-item ">
+
+                <img class="d-block w-100" src="assets/img/1.png" alt="Face Mask is mandatory">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="assets/img/2.png" alt="Maintain physical distance of 6ft">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="assets/img/3.png" alt="Use hand sanitiser">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="assets/img/4.png" alt="Check Fever">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="assets/img/5.png" alt="Sanitize hands">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="assets/img/7.png" alt="Access to washrooms limited">
+            </div>
         </div>
-        
-      </div>
+
+    </div>
+
+    <div class="container">
+        <div class="warn-card">
+            <div class="row">
+                <div class="col-2">
+                   <h1><i class="fa fa-exclamation-triangle fa-6x" aria-hidden="true"></i></h1> 
+                </div>
+                <div class="col-10">
+                    <p class="lead"> Athletes reporting symptoms or feeling unwell/ unsure will not be allowed into the swimming complex. </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="warn-card">
+            <div class="row">
+                <div class="col-2">
+                   <h1><i class="fa fa-exclamation-triangle fa-6x" aria-hidden="true"></i></h1> 
+                </div>
+                <div class="col-10">
+                    <p class="lead"> Parents / guardians/ drivers will not be allowed in the swimming pool Gallery or reception area.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
 
 
 
@@ -184,16 +249,15 @@
         <div class="container">
 
             <small>Made with ♡ by <a style="color: inherit;" href="https://unicographix.com">Unicographix</a></small>
-            <small style="float: right;"> <a style="color: inherit;"
-                    href="https://github.com/vineetjk/"><i class="fa fa-github"
-                        aria-hidden="true"></i></a></small>
+            <small style="float: right;"> <a style="color: inherit;" href="https://github.com/vineetjk/"><i
+                        class="fa fa-github" aria-hidden="true"></i></a></small>
 
         </div>
 
     </footer>
     <script>
         // Get the input field
-        var input = document.getElementById("inputID");
+        var input = document.getElementById("inputDOB");
 
         // Execute a function when the user releases a key on the keyboard
         input.addEventListener("keyup", function (event) {
@@ -204,15 +268,36 @@
                 // Trigger the button element with a click
                 btnFetch();
             }
-        }); 
+        });
 
-        
+
     </script>
     <script>
         $('#button').click(function () {
             btnFetch();
         });
-  
+        $('input.vvv').on('change', function () {
+           
+            $('input.example').prop('checked', true);
+            $('.example').button('toggle');
+        });
+
+    </script>
+    <script>
+        function myFunction() {
+            var coffee = document.forms[0];
+            var txt = "";
+            var i;
+            for (i = 0; i < coffee.length; i++) {
+                if (coffee[i].checked) {
+                    txt = txt + coffee[i].value + " ";
+                }
+            }
+            console.log(txt);
+        }
+    </script>
+    <script>
+
 
     </script>
 </body>

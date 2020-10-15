@@ -38,3 +38,11 @@
 
 }
 
+.warn-card{
+    background-color: rgba(255, 174, 0, 0.836);
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.109) 2px 2px 5px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    
+}

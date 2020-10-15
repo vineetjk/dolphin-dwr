@@ -21,6 +21,7 @@ var pathString = '';
  var btn = document.getElementById("fetch");
 
 function btnFetch(){
+  var dob = document.getElementById("inputDOB").value;
   console.log(document.getElementById("inputID").value);
   var id = document.getElementById("inputID").value;
   console.log(id.includes('CSE'));
@@ -28,13 +29,13 @@ function btnFetch(){
     x = document.getElementById("alertt");
       x.style.display = "none";
      
-    pathString = '/CSE/'+ id + '/name';
+    pathString = '/CSE/'+ id ;
     
   }else if(id.includes('KEN')){
     x = document.getElementById("alertt");
       x.style.display = "none";
       
-    pathString = '/KEN/'+ id + '/name';
+    pathString = '/KEN/'+ id ;
   }else{
     alerting("Please Enter correct ID");
      
@@ -43,16 +44,14 @@ function btnFetch(){
 
   database.ref(pathString).once('value', function (snapshot) {
     
-    if(snapshot.val() != null){
+    if(snapshot.val() != null && snapshot.val()['dob']==dob){
       x = document.getElementById("alertt");
       x.style.display = "none";
       
-      document.getElementById("output").innerHTML = "Welcome " + "<b>"+ snapshot.val()+ "<b>";
+      document.getElementById("output").innerHTML = "Welcome " + "<b>"+ snapshot.val()['name']+ "<b>";
       y = document.getElementById("main-form");
       y.style.display = "block";
     }else{
-      
-
       alerting("Data Not Found. Please contact admin.");
     }
    
