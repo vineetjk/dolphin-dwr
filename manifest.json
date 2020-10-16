@@ -1,6 +1,6 @@
 {
     "name": "Dolphin Aquatics",
-    "short_name": "RT-PCR test",
+    "short_name": "Dolphin Aquatics DWR",
     "description": "RT-PCR test for Covid-19 prior to resumption of training.",
     "start_url": "./?utm_source=homescreen",
     "background_color": "#000000",
@@ -8,7 +8,7 @@
     "display": "standalone",
     "icons": [{
       "src": "assets/img/logo.png",
-      "sizes": "256x256",
+      "sizes": "300x256",
       "type": "image/png"
     }]
   }
