@@ -12,6 +12,18 @@ var DBconfig = {
 
 var x , y ;
 
+var today = new Date();
+var dd = String(today.getDate()).padStart(2, '0');
+var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+var yyyy = today.getFullYear();
+
+today = yyyy+'-'+mm+'-'+dd;
+var dayid = dd+mm+yyyy;
+
+
+
+
+
 var pathString = '';
 
  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -36,6 +48,11 @@ function btnFetch(){
       x.style.display = "none";
       
     pathString = '/KEN/'+ id ;
+  }else if(id.includes('STF')){
+    x = document.getElementById("alertt");
+      x.style.display = "none";
+      
+    pathString = '/STF/'+ id ;
   }else{
     alerting("Please Enter correct ID");
      
@@ -49,6 +66,11 @@ function btnFetch(){
       x.style.display = "none";
       
       document.getElementById("output").innerHTML = "Welcome " + "<b>"+ snapshot.val()['name']+ "<b>";
+      document.getElementById("name").value = snapshot.val()['name'];
+      document.getElementById("memid").value = id;
+      document.getElementById("uid").value = dayid +'_'+id;
+      document.getElementById("date").value = today;
+
       y = document.getElementById("main-form");
       y.style.display = "block";
     }else{
@@ -72,4 +94,51 @@ function alerting(str) {
   
 } 
 
- 
+var txt = "";
+function getSymtoms() {
+  var symts = document.forms[0];
+  
+  var i;
+  for (i = 0; i < symts.length; i++) {
+      if (symts[i].checked) {
+          txt = txt + symts[i].value + ", ";
+      }
+  }
+  console.log(txt);
+  document.getElementById("symtoms").value = txt;
+  
+}
+
+var submitted = false;
+
+function finalSubmit(){
+  console.log('in final submit');
+  getSymtoms();
+  var unwell;
+  
+  if (document.getElementById('option1').checked) {
+    unwell = document.getElementById('option1').value;
+  }else if (document.getElementById('option2').checked) {
+    unwell = document.getElementById('option2').value;
+  }else if (document.getElementById('option3').checked) {
+    unwell = document.getElementById('option3').value;
+  }
+  document.getElementById("isunwell").value = unwell;
+
+  if(txt.length==0){
+    alerting("Incomplete form")
+  }else{
+    submitted = true;
+    document.getElementById('hidden_iframe').onload = function(){
+      if(submitted) {window.location='thankyou.html';}
+    
+    }
+    document.getElementById('submitbt').click();
+  }
+  
+
+}
+
+
+
+

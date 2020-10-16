@@ -39,11 +39,11 @@
 
     </script>
     <!-- manifest file  -->
-<link rel="manifest" href="manifest.json" />
+    <link rel="manifest" href="manifest.json" />
 
     <script src="pwabuilder-sw.js"></script>
     <script src="pwabuilder-sw-register.js"></script>
-    
+
     <script async src="https://unpkg.com/pwacompat" crossorigin="anonymous"></script>
 
 
@@ -95,7 +95,7 @@
 
 
 
-        <div class="alert alert-danger mt-3" role="alert" id="alertt" style="display: none;">
+        <div class="danger-card alert  mt-3" role="alert" id="alertt" style="display: none;">
 
         </div>
 
@@ -116,13 +116,13 @@
                 <div class="col-8 text-right ">
                     <div class="btn-group btn-group-toggle ml-0 " data-toggle="buttons">
                         <label class="btn btn-outline-info outline active">
-                            <input type="radio" name="options" id="option1" checked> Yes
+                            <input type="radio" name="options" id="option1" value="YES" checked> Yes
                         </label>
                         <label class="btn btn-outline-info">
-                            <input type="radio" name="options" id="option2"> Maybe
+                            <input type="radio" name="options" id="option2" value="MAYBE"> Maybe
                         </label>
                         <label class="btn btn-outline-info">
-                            <input type="radio" name="options" id="option2"> No
+                            <input type="radio" name="options" id="option3" value="NO"> No
                         </label>
                     </div>
                 </div>
@@ -137,7 +137,7 @@
 
             </div>
             <div class="row">
-
+                <form >
                 <div class="btn-group-toggle" data-toggle="buttons">
                     <label class="btn btn-outline-danger m-2">
                         <input class="example" type="checkbox" value="Fever"> Fever
@@ -173,23 +173,36 @@
                     </label>
 
                 </div>
+            </form>
 
 
 
                 <div>
 
                 </div>
-                <input type="button" value="Send order">
-
+              
             </div>
         </div>
 
+
+        <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeYX8t6kSOz5wD9bcUVE907iDP0zqx561KFK36SN1z7QzN_fg/formResponse"   method="POST" target="hidden_iframe" >
+            <input style="display: none;" type="text"  value="" id="uid"  name="entry.1856222812" required="required" >
+            <input style="display: none;" type="text"  value="" id="memid" name="entry.1333941126"   required="required" >
+            <input style="display: none;" type="text"  value="" id="date" name="entry.684506383" required="required" >
+            <input style="display: none;" type="text"  value="" id="name" name="entry.209275373" required="required" >
+            <input style="display: none;" type="text"  value="" id="isunwell" name="entry.1950761568" required="required" >
+            <input style="display: none;" type="text"  value="symptoms" id="symtoms" name="entry.667851853" required="required" >
+
+            <button type="submit" id="submitbt" style="display: none;" ></button>
+        </form>
+        <button type="button" id="bttt"  class="btn btn-primary"  >Submit<span></span><span></span><span></span></button>
 
 
 
 
     </div>
 
+    <div class="container">
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
 
@@ -220,6 +233,8 @@
 
     </div>
 
+</div>
+<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"  ></iframe> 
     <div class="container">
         <div class="warn-card">
             <div class="row">
@@ -280,26 +295,20 @@
         $('#button').click(function () {
             btnFetch();
         });
-        $('input.vvv').on('change', function () {
 
-            $('input.example').prop('checked', true);
-            $('.example').button('toggle');
+        $('#bttt').click(function () {
+            finalSubmit();
         });
 
+       
+        
     </script>
-    <script>
-        function myFunction() {
-            var coffee = document.forms[0];
-            var txt = "";
-            var i;
-            for (i = 0; i < coffee.length; i++) {
-                if (coffee[i].checked) {
-                    txt = txt + coffee[i].value + " ";
-                }
-            }
-            console.log(txt);
-        }
-    </script>
+    <script type="text/javascript">var submitted=false;</script>
+    
+    <!--Update the URL for thank you page on form submit -->
+    
+    
+    
     <script>
 
 
